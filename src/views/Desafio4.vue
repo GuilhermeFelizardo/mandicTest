@@ -11,7 +11,7 @@
           <v-text-field
             v-model="texto"
             type="text"
-            hint='Exemplo: mandic clound solutions'
+            hint='Exemplo: mandic cloud solutions'
             :rules="rules"
             outlined
             label="Texto"
