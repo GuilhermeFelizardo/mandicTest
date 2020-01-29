@@ -21,6 +21,18 @@
       </v-row>
     </v-form>
     <v-btn @click="traduzirTexto">TRADUZIR</v-btn>
+    <br/>
+    <br/>
+    <v-row>
+      <v-col cols="12" md="4">
+        <v-text-field
+          v-model="textoModel"
+          type="string"
+          outlined
+          label="Texto Traduzido"
+        ></v-text-field>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -32,7 +44,8 @@ export default {
       rules: [
         value => !!value || 'Campo obrigatorio.'
       ],
-      texto: null
+      texto: null,
+      textoModel: null
     }
   },
 
@@ -53,7 +66,7 @@ export default {
           textoTraduzido = textoTraduzido.replace('x', '24')
         }
 
-        alert('O texto traduzido para o novo alfabeto é: ' + textoTraduzido)
+        this.textoModel = textoTraduzido
       } else {
         alert('Digite todos os campos!')
       }

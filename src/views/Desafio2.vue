@@ -7,6 +7,6 @@
 <script>
 
 export default {
-  name: 'Desafio 2'
+
 }
 </script>

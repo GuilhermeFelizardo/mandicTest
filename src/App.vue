@@ -5,6 +5,9 @@
       dark
       color="primary"
     >
+      <v-btn text @click="$router.push(`/`)">
+        Inicio
+      </v-btn>
       <v-btn text @click="irRota(1)">
         Desafio 1
       </v-btn>
