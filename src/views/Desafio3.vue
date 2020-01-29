@@ -6,7 +6,7 @@
       Digite o texto para convertê-lo para o novo alfabeto.
     </span>
     <v-form ref="formText" v-model="form" lazy-validation>
-      <v-row>
+      <v-row >
         <v-col cols="12" md="4">
           <v-text-field
             v-model="texto"
@@ -21,9 +21,7 @@
       </v-row>
     </v-form>
     <v-btn @click="traduzirTexto">TRADUZIR</v-btn>
-    <br/>
-    <br/>
-    <v-row>
+    <v-row class='pt-2 pb-2 mt-2 mb-2'>
       <v-col cols="12" md="4">
         <v-text-field
           v-model="textoModel"

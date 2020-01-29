@@ -37,7 +37,7 @@
         <v-btn @click="calcularIMC">Calcular IMC</v-btn>
       </v-row>
     </v-form>
-    <v-row>
+    <v-row class='pt-3 pb-3 mt-3 mb-3'>
     <v-col cols="12" md="4">
       <v-text-field
         v-model="imcResult"
