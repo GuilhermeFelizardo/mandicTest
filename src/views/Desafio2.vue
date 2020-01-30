@@ -1,9 +1,10 @@
 <template>
     <v-container>
+      <span class="display-1"> Desafio 2 - Verificar conexão a Internet</span>
       <v-col>
         <v-row class='pt-2 pb-2 mt-2 mb-2'>
           <span>Para executar o "Desafio02", favor acessar o link: </span>
-          <a class="pl-1" href="https://drive.google.com/open?id=11OoHrosztZp4seykEQTQWJOl_U1QyOEh" target="_blank"> https://drive.google.com/open?id=11OoHrosztZp4seykEQTQWJOl_U1QyOEh</a>
+          <a class="pl-1" href="https://drive.google.com/open?id=1AXEvsNEmA_L3gLX8VEfD9joYUMFrqVoN" target="_blank"> https://drive.google.com/open?id=1AXEvsNEmA_L3gLX8VEfD9joYUMFrqVoN</a>
           <span class="pl-1"> e baixar o "Desafio 02.rar".</span>
         </v-row>
         <v-row class='pt-2 pb-2 mt-2 mb-2'>
@@ -43,14 +44,14 @@ namespace Teste
         {
             bool verificandoInternet = false;
             bool compare;
-
+            bool firstTime = true;
             Console.WriteLine("## DESAFIO 02 - VERIFICAR ACESSO A INTERNET ##");
 
             while (true)
             {
                 compare = verificandoInternet;
                 verificandoInternet = System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
-                if (compare != verificandoInternet)
+                if (compare != verificandoInternet || firstTime == true)
                 {
                     if (verificandoInternet == true)
                     {
@@ -60,11 +61,13 @@ namespace Teste
                     {
                         Console.WriteLine("\\n>> Conexão perdida, sem acesso a Internet!");
                     }
+                    firstTime = false;
                 }          
             }           
         }
     }
 }
+
 `
     }
   }
